@@ -145,9 +145,9 @@
 
   /* FRONT — vivid yellow */
   .card-front {
-    background: linear-gradient(145deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+    background: linear-gradient(145deg, #ffd900bf 0%, #FFA500 50%, #ff8c00e5 100%);
     border: 3px solid #FFE55C;
-    box-shadow: 0 0 60px rgba(255,215,0,0.5), 0 20px 60px rgba(255,140,0,0.3);
+    box-shadow: 0 0 40px rgba(255,215,0,0.5), 0 20px 60px rgba(255,140,0,0.3);
   }
   .card-front::before {
     content: '';
@@ -195,9 +195,9 @@
     font-weight: 700;
   }
   .card-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(2.2rem, 8vw, 3.2rem);
-    color: #4a1e00; line-height: 1.1;
+    color: #4a1e00; line-height: 1.17;
     position: relative; z-index: 1;
     text-shadow: 0 2px 8px rgba(255,255,255,0.3);
     font-weight: 700;
@@ -549,7 +549,7 @@
 
 <!-- ══ ACT 1 ══ -->
 <section class="act active" id="act1" aria-label="Birthday card">
-  <p class="act1-title">✨ A little something, just for you ✨</p>
+  <p class="act1-title">✨ A little something, just for you Mon Cheri ✨</p>
   <div class="card-scene">
     <div class="card-wrap" id="card-wrap" onclick="openCard()" role="button" aria-label="Open birthday card" tabindex="0">
       <div class="card-face card-front">
@@ -558,9 +558,9 @@
         <span class="ribbon ribbon-bl">💛</span>
         <span class="ribbon ribbon-br">🌺</span>
         <div class="card-icon">🎂</div>
-        <div class="card-eyebrow">A Birthday Surprise</div>
-        <h1 class="card-heading">Happy<br>Birthday!</h1>
-        <p class="card-name">Mon Chéri 🌟</p>
+        <!-- <div class="card-eyebrow">A Birthday Surprise</div> -->
+        <h1 class="card-heading">Happy<br>Birthday! Badmus <br>Modupeola❤️🌸</h1>
+        <!-- <p class="card-name"> My Love❤️ </p> -->
         <p class="card-tap-hint">— tap to open —</p>
       </div>
       <div class="card-face card-back">
@@ -569,7 +569,7 @@
         <span class="ribbon ribbon-bl">💚</span>
         <span class="ribbon ribbon-br">❤️</span>
         <div class="card-icon">🌸</div>
-        <p class="card-back-text">Today the whole world celebrates the day you arrived in it. And I am the luckiest person alive to call you mine.</p>
+        <p class="card-back-text">Today, I celebrate the day you arrived in my life. I am, without a doubt, the luckiest person alive to call you mine</p>
         <p class="card-back-name">Adunni Mi 🌟</p>
       </div>
     </div>
@@ -581,8 +581,8 @@
 <section class="act" id="act2" aria-label="Fireworks">
   <canvas id="fw-canvas"></canvas>
   <div class="fw-text">
-    <h2 class="fw-headline">Happy Birthday,<br>Adunni Mi! 🌟</h2>
-    <p class="fw-names">My Love &nbsp;·&nbsp; Mon Chéri &nbsp;·&nbsp; Sweetheart</p>
+    <h2 class="fw-headline">Happy Birthday,<br>My Darling ! 🌟</h2>
+    <p class="fw-names">My Love &nbsp;·&nbsp; Mon Chéri &nbsp;·&nbsp; Sweetheart &nbsp;·&nbsp; Adunni Mi <br> &nbsp;·&nbsp; My One and Only ·&nbsp; My Queen  ·&nbsp; Ife Mi </p>
     <button class="fw-btn" onclick="goTo(3)">Read your letter 💌</button>
   </div>
 </section>
@@ -620,18 +620,16 @@
 <script>
 /* ══ DATA ══ */
 const reasons = [
-  { icon: "🌙", label: "Reason 01", text: "Because you make even the quietest evenings feel like the most beautiful adventure." },
-  { icon: "🌸", label: "Reason 02", text: "Because your laughter is the song I never want to stop hearing." },
-  { icon: "🔥", label: "Reason 03", text: "Because your strength inspires me to be a better person every single day." },
-  { icon: "💫", label: "Reason 04", text: "Because the way you love — deeply, freely, wholly — is the rarest thing I've ever known." },
-  { icon: "🌿", label: "Reason 05", text: "Because home stopped being a place the moment I found you." },
-  { icon: "✨", label: "Reason 06", text: "Because you see the good in everything, and that light changes the world around you." },
-  { icon: "🌊", label: "Reason 07", text: "Because your heart is the safest, warmest place I have ever rested mine." },
-  { icon: "🕊️", label: "Reason 08", text: "Because simply put — you are the best thing that has ever happened to me." },
+  { icon: "🌙", label: "Reason 01", text: "I love how thoughtful you are. You care deeply, and it shows in the little things you do, the questions you ask, and the attention you give to the people you love. Your kindness never feels forced—it simply flows from who you are." },
+  { icon: "🌸", label: "Reason 02", text: "I love your energy. There’s just something about being around you that makes my day better. Even the simplest moments feel lighter and more enjoyable when you're there." },
+  { icon: "🔥", label: "Reason 03", text: "I love your wisdom and the way you see things. You have a way of understanding people, situations, and life itself with such depth, and I admire that so much." },
+  { icon: "💫", label: "Reason 04", text: "I love how supportive you are. You stand by me, believe in me, and encourage me even when things are difficult. Knowing that I have you in my corner gives me confidence and strength that words cannot fully describe." },
+  { icon: "🌿", label: "Reason 05", text: "I love your determination, your resilience, and the way you have a beautiful heart behind everything you do, and this makes me proud of the woman you are becoming." },
+  { icon: "🕊️", label: "Reason 06", text: "Thank you for being my partner, my best friend, my confidante, and one of God's greatest blessings in my life." },
 ];
 
 const letterGreeting = "My Dearest Adunni Mi,";
-const letterText = `On this day, the universe gave me the most beautiful reason to celebrate — you.\n\nYou came into my life like a dawn I never expected, and every morning since has felt like a gift I don't deserve but hold onto with both hands. Mon Chéri, you are not just my love — you are my peace, my laughter, my home.\n\nI have watched you carry grace in everything you do, and I am in awe. There is a warmth in you that makes the whole world feel softer. Today, on your birthday, I simply want you to know how seen, how cherished, how deeply loved you are.\n\nHappy birthday, Sweetheart. The best is yet to come — and I want to share every moment of it with you.`;
+const letterText = `Two years ago, I made the best decision of my life; I chose you. And today, on your birthday, I find myself more certain of that decision than ever before.\n\nIn these two years, you have shown me what it truly means to be loved — not perfectly, but genuinely. You have been my soft place to land on the hard days, my loudest cheerleader on the good ones, my best friend, my favourite person in every moment. My Love❤️, you are not just my wife — you are my favorite person.\n\nI have watched you grow, stretch, and bloom in ways that leave me speechless. Your strength is quiet but unshakeable. Your kindness is effortless but world-changing. And your heart — that beautiful, generous heart — is the greatest gift I get to witness every single day.\n\nSo today is not just your birthday. It is a celebration of the woman you are, the woman you are becoming, and the life we are building together. I pray this new year of your life carries more joy, more peace, and more of everything you deserve.\n\nHappy birthday, Mon Chéri. The best chapters of our story are still being written — and I would not want to write them with anyone else but you. \n\nForever yours, with every heartbeat ♥ \n\n Happy Birthday, Sweetheart. Here's to a lifetime more, MY FINE GIRL ❤️🌹 \n\n MR D`;
 
 /* ══ FLOATING EMOJIS ══ */
 const floatSyms = ['🌸','⭐','💛','🌺','💜','💙','💚','❤️','✨','🎉','🎊','🌟','💐','🦋'];
