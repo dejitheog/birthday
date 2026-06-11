@@ -112,23 +112,35 @@
     letter-spacing: 0.1em;
   }
 
-  .card-scene { perspective: 1400px; }
+  .card-scene {
+    -webkit-perspective: 1400px;
+    perspective: 1400px;
+  }
   .card-wrap {
     width: clamp(290px, 85vw, 360px);
-    height: clamp(400px, 70vw, 490px);
-    position: relative; transform-style: preserve-3d;
+    height: clamp(430px, 115vw, 490px);
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: transform 1.3s cubic-bezier(0.35, 0, 0.15, 1);
     transition: transform 1.3s cubic-bezier(0.35, 0, 0.15, 1);
     cursor: pointer;
   }
-  .card-wrap.open { transform: rotateY(-168deg); }
+  .card-wrap.open {
+    -webkit-transform: rotateY(-168deg);
+    transform: rotateY(-168deg);
+  }
 
   .card-face {
     position: absolute; inset: 0;
-    backface-visibility: hidden; border-radius: 24px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 24px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     padding: clamp(1.5rem, 5vw, 2.5rem);
     text-align: center; overflow: hidden;
+    -webkit-transform: translateZ(0);
   }
 
   /* FRONT — vivid yellow */
@@ -157,6 +169,7 @@
   .card-back {
     background: linear-gradient(145deg, #FF6B9D 0%, #9B59B6 50%, #3498DB 100%);
     border: 3px solid rgba(255,255,255,0.4);
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     box-shadow: 0 0 60px rgba(155,89,182,0.4);
   }
@@ -405,30 +418,45 @@
   }
 
   .flip-card {
+    -webkit-perspective: 900px;
     perspective: 900px;
     height: clamp(175px, 30vw, 215px);
     cursor: pointer;
   }
   .flip-inner {
     width: 100%; height: 100%;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
     transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
     position: relative;
   }
-  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-card.flipped .flip-inner {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
   @media (hover: hover) {
-    .flip-card:hover .flip-inner { transform: rotateY(180deg); }
+    .flip-card:hover .flip-inner {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
   }
 
   .flip-f, .flip-b {
     position: absolute; inset: 0;
-    backface-visibility: hidden; border-radius: 18px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 18px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     padding: clamp(1rem, 3vw, 1.5rem); text-align: center;
     overflow: hidden;
+    -webkit-transform: translateZ(0);
   }
-  .flip-b { transform: rotateY(180deg); }
+  .flip-b {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
 
   /* Each card gets a unique vivid color combo */
   .flip-card:nth-child(1) .flip-f { background: linear-gradient(145deg, #FFD700, #FF8C00); border: 2px solid #FFE55C; }
@@ -530,7 +558,7 @@
         <span class="ribbon ribbon-bl">💛</span>
         <span class="ribbon ribbon-br">🌺</span>
         <div class="card-icon">🎂</div>
-        <!-- <div class="card-eyebrow">BIRTHDAY</div> -->
+        <div class="card-eyebrow">A Birthday Surprise</div>
         <h1 class="card-heading">Happy<br>Birthday!</h1>
         <p class="card-name">Mon Chéri 🌟</p>
         <p class="card-tap-hint">— tap to open —</p>
